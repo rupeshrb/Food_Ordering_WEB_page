@@ -1,0 +1,209 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    /* font */
+    font-family: 'Poppins', sans-serif; 
+    background-color: rgb(247, 247, 247); ;  
+}
+button{
+    font-family: 'Poppins', sans-serif;
+
+}
+header{
+    /* layout */
+    display: flex;
+    /* to make distance from borders */
+    width: 90%;
+    height: 10vh;
+    margin: auto;
+    /* to push elements to the center in sense of height */
+    align-items: center;
+}
+.logo-box,.nav-links,.cart{
+    display: flex;
+}
+.logo-box{
+    flex: 1;
+}
+.logo{
+    font-weight: 400;
+   margin-top: 80px;
+   margin-left: 67.5px;
+   font-size: 31px;
+   font-weight:revert;
+}
+
+nav{
+    flex: 2;
+}
+.nav-links {
+    justify-content: space-around;
+    list-style: none;
+    margin-left: 190px;
+    margin-top: 80px;
+}
+.nav-link {
+    margin-top: 20%;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+.nav-link:hover{
+    color: orange;
+}
+
+/* main part */
+
+.presentation{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    margin-left: 144px;
+    min-height: 80vh;
+    align-items: center;
+}
+.introduction{
+    flex: 1;
+}
+.intro-text h1{
+margin-top: 110px;
+    font-size: 60px;
+    font-weight: 700;
+    background: linear-gradient(to right,gray,#6f6f89);
+    /* giving color gradient to text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.intro-text h2{
+    margin-top: -14px;
+    font-size:59px;
+    font-weight: 670;
+    -webkit-background-clip: text;
+    
+}
+.h1_top h1{
+    margin-top: -18px;
+}
+.intro-text p{
+    margin: 5px;
+    font-size: 12px;
+    color: black;
+ 
+}
+.cta{
+    /* clockwise */
+    padding: 23px 0px 0px 0px;
+}
+button.cta-select {
+    border: 2px solid rgb(247, 247, 247);
+    /* background-size: cover; */
+    background-position: center center;
+    /* color: #c36cbb; */
+    width: 162px;
+    color: white;
+    height: 43px;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: -25px;
+    background-image: url(./img/button.jpeg);
+}
+button.cta-select :hover{
+    color: orange;
+
+}
+.cta-add{
+    background: #c36cbb;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    color: white;
+    margin: 30px 0px 0px 30px;
+}
+.cover {
+    margin-left: 2px;
+    margin-top: 125px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+}
+.cover img{
+    height: 65%;
+    /* adding shadow to laptop image */
+    filter: drop-shadow(5px 12px 14px gray);
+    
+    animation: drop 1.5s ease;
+    position: absolute;
+ 
+    margin:-60px -1px 57px -60px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 10s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.big-circle {
+    position: absolute;
+    top: -4px;
+    right: -14px;
+    z-index: -1;
+    opacity: 1;
+    height: 70%;
+}
+.laptop-select{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    right: 20%;
+}
+
+@keyframes drop{
+    0%{
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .presentation{
+        flex-direction: column;
+    }
+    .introduction{
+        margin-top: 5vh;
+        text-align: center;
+    }
+    .intro-text{
+        font-size: 30px;
+    }
+    .intro-text p{
+        font-size: 18px;
+    }
+    .cta{
+        padding: 10px 0px 0px 0px;
+    }
+    .laptop-select{
+        bottom: 5%;
+        right: 50%;
+        width: 50%;
+        transform: translate(50%, 5%);
+    }
+    .cover img{
+        height: 80%;
+        width: 80%;
+    }
+    .small-circle,.mid-circle,.small-circle{
+        opacity: 0.2;
+    }
+}

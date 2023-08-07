@@ -1,0 +1,98 @@
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="apple-touch-icon" sizes="76x76" href="./img/image 2.png">
+    <link rel="icon" href="./img/image 2.png">
+    <title>GOOD FOOD</title>
+</head>
+<body>
+    <header>
+        <div class="logo-box">
+       
+        
+            <h4 class="logo"><span style="color: rgb(142, 210, 54);">GOOD</span><span style="color: orange;">FOOD</span></h2>
+        </div>
+        <nav>
+            <ul class="nav-links">
+      
+                <li><a class="nav-link" href="#"  >Home</a></li>
+                <li><a class="nav-link" href="#"  >Menu</a></li>
+                <li><a class="nav-link" href="#" >About Us</a></li>
+                <li><a class="nav-link" href="#" >Blog</a></li>
+                <li><a class="nav-link" href="#" >Login</a></li>
+                <li><a class="nav-link" href="#">SignUp</a></li>
+            </ul>
+        </nav>
+  
+    </header>
+
+    <main>
+        <section class="presentation">
+            <!-- Taking 2 div because we can use flex and create layout easily -->
+            <!-- Laptop headline div-->
+            <div class="introduction">
+                <div class="intro-text">
+                    <h1>CHANGE YOUR</h1>
+                 <div class="h1_top">  <h1>MOOD WITH </h1></div>
+                        <h2><span style="color: rgb(142, 210, 54);">GOOD</span><span style="color: orange;">FOOD</span></h2>
+                    <p>
+               <b>         
+        There are many variations of passages of Lorem Ipsum<br>
+        available, but the majority have suffered alteration in some<br> 
+        form, by injected humour, or randomised words which don't <br>
+        look even slightly believable.
+                  </b>  </p>
+                </div>
+                <div class="cta">
+                  
+                    <button class="cta-select"> <span>Order Now</span></button>
+
+                </div>
+            </div>
+            <!-- Laptop image div -->
+            <div class="cover">
+                <img src="./img/image 1.png"class="mySlides" alt="matebook" />
+                <img src="./img/image 2.png" class="mySlides" alt="matebook" />
+                <img src="./img/image 3.png" class="mySlides" alt="matebook" />
+                <img src="./img/image 5.png" class="mySlides" alt="matebook" />
+                <img src="./img/image 6.png" class="mySlides" alt="matebook" />
+            </div>
+        </section>
+
+        <!-- <div class="laptop-select">
+            <img src="./img/arrow-left.svg" alt="">
+            <img src="./img/dot.svg" alt="">
+            <img src="./img/dot-full.svg" alt="">
+            <img src="./img/dot-full.svg" alt="">
+            <img src="./img/arrow-right.svg" alt="">
+        </div> -->
+
+        <!-- background img -->
+        <img class="big-circle" src="./img/circle1.jpeg" alt="">
+
+    </main>
+    <script>
+        var myIndex1 = 0;
+        carouse();
+        
+        function carouse() {
+          var i;
+          var y = document.getElementsByClassName("mySlides");
+          for (i = 0; i < y.length; i++) {
+            y[i].style.display = "none";  
+          }
+          myIndex1++;
+          if (myIndex1 > y.length) {myIndex1 = 1}    
+          y[myIndex1-1].style.display = "block";  
+          setTimeout(carouse, 5000); // Change image every 2 seconds
+        }
+        </script>
+</body>
+</html>
